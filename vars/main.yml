@@ -1,0 +1,10 @@
+---
+# vars file for tomcat
+ java: java-1.8.0-openjdk
+ dest_user: /home/ec2-user/tomcat/conf/tomcat-users.xml
+ dest_server: /home/ec2-user/tomcat/conf/server.xml
+ dest_context: /home/ec2-user/tomcat/webapps/manager/META-INF/context.xml
+ start: /home/ec2-user/tomcat/bin/startup.sh
+ stop: /home/ec2-user/tomcat/bin/shutdown.sh
+
+ 

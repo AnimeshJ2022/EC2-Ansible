@@ -1,0 +1,12 @@
+---
+# tasks file for tomcat
+ - include: install.yml
+ - name: Ansible to  check path exists
+   stat:
+     path: /home/ec2-user/tomcat
+   register: path
+ - include: download_tomcat.yml
+   when:
+     - path.stat.exists == false
+ - include: config_tomcat.yml
+ - include: start_tomcat.yml 

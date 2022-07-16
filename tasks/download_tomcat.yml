@@ -1,0 +1,10 @@
+---
+ - name: Download Tomcat #download tar file
+   command: wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz
+ - name: Extracting Tomcat #extract tomcat
+   command: tar xvf apache-tomcat-9.0.64.tar.gz
+ - name: Cleaning Tomcat Directory #removing tar file
+   command: rm -f apache-tomcat-9.0.64.tar.gz
+ - name: renaming Tomcat Folder #Naming the tomcat folder to suitable name
+   command: mv apache-tomcat-9.0.64/ tomcat/
+   

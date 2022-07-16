@@ -1,0 +1,14 @@
+---
+ - name:
+   template: 
+     src: users.xml
+     dest: "{{dest_user}}"   
+ - name: 
+   template: 
+     src: server.xml
+     dest: "{{dest_server}}"
+ - name: 
+   template: 
+     src: context.xml
+     dest: "{{dest_context}}"  
+   notify: restart tomcat
